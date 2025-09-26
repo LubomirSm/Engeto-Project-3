@@ -1,6 +1,6 @@
 ## Popis funkce a použití
 
-Tento program slouží ke stažení volebních dat z uživatelem zvoleného územního celku (rok 2017). V tomto odkazu: https://www.volby.cz/pls/ps2017nss/ps3?xjazyk=CZ si uživatel vybere územní celek kliknutím na "X" ve sloupci "Vyběr obce" a zkopíruje URL/odkaz dané stránky. Například pro Olomoucký kraj - Prostějov to bude: https://www.volby.cz/pls/ps2017nss/ps32?xjazyk=CZ&xkraj=12&xnumnuts=7103. Ten použije jako argument pro --url, druhý argument pro --output_file bude název výstupního souboru např.: prostejov.csv (název musí končit koncovkou .csv).
+Tento program slouží ke stažení volebních dat z uživatelem zvoleného územního celku (rok 2017). V tomto odkazu: https://www.volby.cz/pls/ps2017nss/ps3?xjazyk=CZ si uživatel vybere územní celek kliknutím na "X" ve sloupci "Výběr obce" a zkopíruje URL/odkaz dané stránky. Například pro Olomoucký kraj - Prostějov to bude: https://www.volby.cz/pls/ps2017nss/ps32?xjazyk=CZ&xkraj=12&xnumnuts=7103. Ten použije jako argument pro --url, druhý argument pro --output_file bude název výstupního souboru např.: prostejov.csv (název musí končit koncovkou .csv).
 Volební data budou uložena do souboru ve složce se staženým programem.
 
 ## Použití ve Visual Studio Code
@@ -33,7 +33,7 @@ Volební data budou uložena do souboru ve složce se staženým programem.
     ```
 
 4. **Spusťte skript**  
-    V terminálu spusťte příkaz s požadovanými parametry, například:  
+    V terminálu (View - Terminal) spusťte příkaz s požadovanými parametry, například:  
     ```
     python main.py --url "https://www.volby.cz/pls/ps2017nss/obce?xjazyk=CZ&xkraj=11&xnumnuts=6205" --output_file "prostejov.csv"
     ```
