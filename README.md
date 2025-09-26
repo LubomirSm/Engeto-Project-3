@@ -1,45 +1,43 @@
-# Engeto-Project-3
+## Popis funkce a použití
 
-Třetí projekt do Engeto Online Python Akademie – Elections Scraper
+Tento program slouží ke stažení volebních dat z uživatelem zvoleného územního celku (rok 2017). V tomto odkazu: https://www.volby.cz/pls/ps2017nss/ps3?xjazyk=CZ si uživatel vybere územní celek kliknutím na "X" ve sloupci "Vyběr obce" a zkopíruje URL/odkaz dané stránky. Například pro Olomouvký kraj - Prostějov to bude: https://www.volby.cz/pls/ps2017nss/ps32?xjazyk=CZ&xkraj=12&xnumnuts=7103
 
-## Popis
-Skript [`main.py`](main.py) slouží ke stažení a zpracování volebních dat z webu volby.cz. Výsledky jsou uloženy do CSV souboru, kde každý řádek odpovídá jedné obci a obsahuje počty hlasů pro jednotlivé strany.
+## Použití ve Visual Studio Code
 
-## Použití
+1. **Otevřete složku projektu**  
+    Spusťte Visual Studio Code a otevřete složku s tímto staženým projektem.
 
-1. Aktivujte virtuální prostředí (volitelné):
-   ```sh
-   .\moje-virt-prostredi\Scripts\activate
-   ```
+    - Windows:  
+      - PowerShell:  
+        ```
+        python -m venv .venv
+        .\.venv\Scripts\activate
+        ```
+      - CMD:  
+        ```
+        python -m venv .venv
+        .\.venv\Scripts\Activate.bat
+        ```
+    - macOS/Linux:  
+      ```
+      python3 -m venv .venv
+      source .venv/bin/activate
+      ```
+      > **Poznámka:** Některé systémy mohou používat příkaz `python` místo `python3`. Pokud příkaz nefunguje, ověřte instalaci Pythonu pomocí `python --version` nebo `python3 --version`.
 
-2. Nainstalujte potřebné knihovny:
-   ```sh
-   pip install -r requirements.txt
-   ```
+3. **Nainstalujte závislosti/knihovny**  
+    V terminálu spusťte:  
+    ```
+    pip install -r requirements.txt
+    ```
 
-3. Spusťte skript s parametry:
-   ```sh
-   python main.py --url "URL_SEZNAMU_OBCÍ" --output_file "vystup.csv"
-   ```
+4. **Spusťte skript**  
+    V terminálu spusťte příkaz s požadovanými parametry, například:  
+    ```
+    python main.py --url "https://www.volby.cz/pls/ps2017nss/obce?xjazyk=CZ&xkraj=11&xnumnuts=6205" --output_file "prostejov.csv"
+    ```
+    - `--url` určuje adresu webové stránky, ze které se budou stahovat data.
+    - `--output_file` nastavuje název výsledného CSV souboru, do kterého se data uloží.
 
-   - `--url` – URL stránky se seznamem obcí (např. https://www.volby.cz/pls/ps2017nss/obce?xjazyk=CZ&xkraj=11&xnumnuts=6205)
-   - `--output_file` – název výstupního CSV souboru (musí končit na `.csv`)
-
-## Příklad
-```sh
-python main.py --url "https://www.volby.cz/pls/ps2017nss/obce?xjazyk=CZ&xkraj=11&xnumnuts=6205" --output_file "prostejov.csv"
-```
-
-## Výstup
-Výsledný CSV soubor bude obsahovat:
-- Kód obce
-- Název obce
-- Počet registrovaných voličů
-- Počet vydaných obálek
-- Počet platných hlasů
-- Počty hlasů pro jednotlivé strany
-
-Výstupní soubor bude uložen ve stejné složce, kde spouštíte skript.
-
-## Poznámky
-- Skript je určen pro volby do Poslanecké sněmovny 2017 (ELECTION_PATH = "ps2017nss").
+5. **Zkontrolujte výstup**  
+    Výsledný CSV soubor najdete ve složce projektu.
