@@ -1,6 +1,6 @@
 ## Popis funkce a použití
 
-Tento program slouží ke stažení volebních dat z uživatelem zvoleného územního celku (rok 2017). V tomto odkazu: https://www.volby.cz/pls/ps2017nss/ps3?xjazyk=CZ si uživatel vybere územní celek kliknutím na "X" ve sloupci "Vyběr obce" a zkopíruje URL/odkaz dané stránky. Například pro Olomouvký kraj - Prostějov to bude: https://www.volby.cz/pls/ps2017nss/ps32?xjazyk=CZ&xkraj=12&xnumnuts=7103. Ten použijete jako argument pro --url, druhý argument pro --outpul_file bude název výstupního souboru např.: prostejov.csv (název musí končit koncovkou .csv). 
+Tento program slouží ke stažení volebních dat z uživatelem zvoleného územního celku (rok 2017). V tomto odkazu: https://www.volby.cz/pls/ps2017nss/ps3?xjazyk=CZ si uživatel vybere územní celek kliknutím na "X" ve sloupci "Vyběr obce" a zkopíruje URL/odkaz dané stránky. Například pro Olomoucký kraj - Prostějov to bude: https://www.volby.cz/pls/ps2017nss/ps32?xjazyk=CZ&xkraj=12&xnumnuts=7103. Ten použije jako argument pro --url, druhý argument pro --output_file bude název výstupního souboru např.: prostejov.csv (název musí končit koncovkou .csv).
 
 ## Použití ve Visual Studio Code
 
