@@ -65,9 +65,9 @@ def scrape_voting_data(village):
 
         # Get basic voter data
         main_data = tables[0].find_all('td', class_='cislo')
-        registered = main_data[3].text.strip().replace('\xa0', '')  # Fourth 
-        envelopes = main_data[4].text.strip().replace('\xa0', '')  # Fifth
-        valid = main_data[7].text.strip().replace('\xa0', '')      # Eighth
+        registered = main_data[3].text.strip().replace('\xa0', '')  # Fourth cell
+        envelopes = main_data[4].text.strip().replace('\xa0', '')  # Fifth cell
+        valid = main_data[7].text.strip().replace('\xa0', '')      # Eighth cell
 
         # Get data about political parties (from both tables)
         for table in tables[1:3]:  # Scraping from two tables

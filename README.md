@@ -2,12 +2,14 @@
 
 Tento program slouží ke stažení volebních dat z uživatelem zvoleného územního celku (rok 2017). V tomto odkazu: https://www.volby.cz/pls/ps2017nss/ps3?xjazyk=CZ si uživatel vybere územní celek kliknutím na "X" ve sloupci "Výběr obce" a zkopíruje URL/odkaz dané stránky. Například pro Olomoucký kraj - Prostějov to bude: https://www.volby.cz/pls/ps2017nss/ps32?xjazyk=CZ&xkraj=12&xnumnuts=7103. Ten použije jako argument pro --url, druhý argument pro --output_file bude název výstupního souboru např.: prostejov.csv (název musí končit koncovkou .csv).
 Volební data budou uložena do souboru ve složce se staženým programem.
+Stažení dat nějaký čas trvá, pokud nesvyskočila chybová hláška, tak vyčkejte na výslednou zprávu.
 
 ## Použití ve Visual Studio Code
 
 1. **Otevřete složku projektu**  
     Spusťte Visual Studio Code a otevřete složku s tímto staženým projektem.
 
+    Po té si aktivujte vituální prostředí:
     - Windows:  
       - PowerShell:  
         ```
@@ -41,4 +43,5 @@ Volební data budou uložena do souboru ve složce se staženým programem.
     - `--output_file` nastavuje název výsledného CSV souboru, do kterého se data uloží.
 
 5. **Zkontrolujte výstup**  
-    Výsledný CSV soubor najdete ve složce projektu.
+    Výsledný CSV soubor najdete ve složce projektu. Pro prohlédnutí výsledků je dobré rozšíření pro VSC(Visual Studio Code): Excel View.
+    Připadně přímé prohlédnutí v Excelu může špatně zobrazit znaky. Pro správné zobrazení je nutné CSV soubor do Excelu nahrát přes "Data"/"Načíst data"/"Ze souboru"/"Z Text/CSV". 
